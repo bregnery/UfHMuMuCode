@@ -2,7 +2,7 @@
 typedef struct {
   int run;
   int lumi;
-  int event;
+  long long int event;
   int bx;
   int orbit;
 } _EventInfo;
@@ -40,6 +40,10 @@ typedef struct {
   int isStandAlone;
   int isGlobal;
 
+  int isTightMuon;
+  int isMediumMuon;
+  int isLooseMuon;
+
   int charge;
   float pt;
   float ptErr;
@@ -58,6 +62,7 @@ typedef struct {
   float d0_PV;
   float dz_PV;
   
+  // +++ should get rid of these now that we have the isTight, isMedium, and isLoose ID's built into CMSSW
   int numPixelLayers;   //number of pixel layers with valid hits
   int numTrackerLayers; //number of tracker layers with valid hits 
   int numStripLayers;   //number of strip layers with valid hits
@@ -70,6 +75,7 @@ typedef struct {
   int numValidStripHits;
   int numSegmentMatches;
   int numOfMatchedStations;
+  // +++
 
   float trackIsoSumPt;
   float trackIsoSumPtCorr;
@@ -100,6 +106,12 @@ typedef struct {
   float hltPt[3];
   float hltEta[3];
   float hltPhi[3];
+
+  // +++ should get rid of these now that we have the isTight, isMedium, and isLoose ID's built into CMSSW
+  float segmentCompatibility;
+  float combinedQualityChi2LocalPosition;
+  float combinedQualityTrkKink;
+  // +++
   
 } _MuonInfo;
 
@@ -182,6 +194,8 @@ typedef struct {
   float genInvF[10];
   // Auxiliary Fraction (Undecayed Sigmas, etc.)
   float genAuxF[10];
+  // PUID
+  float puid[10];
 } _PFJetInfo;
 
 // generator level jets
