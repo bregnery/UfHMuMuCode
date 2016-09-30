@@ -1,0 +1,219 @@
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+
+
+Running over MC sample
+Sample Name:    dy_jetsToLL
+Sample DAS DIR: /DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v1/MINIAODSIM
+
+Loading Global Tag: 74X_mcRun2_asymptotic_v2
+DEBUG 2016-09-30 21:07:26,972: 	 Executing command: 'submit'
+DEBUG 2016-09-30 21:07:26,972: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-09-30 21:07:26,979: 	 Checking credentials
+DEBUG 2016-09-30 21:07:26,979: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-09-30 21:07:26,979: 	 Getting proxy life time left
+DEBUG 2016-09-30 21:07:27,490: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86377
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:28,097: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86376
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:28,097: 	 Proxy valid for 23:59:37 hours
+INFO 2016-09-30 21:07:28,097: 	 Will use CRAB configuration file crab_auto_submit_dy_jetsToLL_JSON.py
+DEBUG 2016-09-30 21:07:28,097: 	 Loading CRAB configuration file.
+DEBUG 2016-09-30 21:07:28,114: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-09-30 21:07:28,231: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:28,231: 	 Checking credentials
+DEBUG 2016-09-30 21:07:28,231: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-09-30 21:07:28,231: 	 Getting proxy life time left
+DEBUG 2016-09-30 21:07:28,738: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86376
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:29,248: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86375
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:29,248: 	 Proxy valid for 23:59:36 hours
+DEBUG 2016-09-30 21:07:29,753: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u79777 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:30,212: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+DEBUG 2016-09-30 21:07:30,323: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:30,323: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-09-30 21:07:30,323: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery_cmsweb.cern.ch for credential name
+DEBUG 2016-09-30 21:07:30,727: 	 Executing : 
+ command : myproxy-info -l 9cc28f874b3232068312953bffc8c33522cba3d9 -s myproxy.cern.ch
+ output : 
+ error: ERROR from myproxy-server:
+no credentials found for user 9cc28f874b3232068312953bffc8c33522cba3d9, owner "/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery" 
+
+ retcode : 1
+DEBUG 2016-09-30 21:07:30,728: 	 Myproxy is valid: -1
+DEBUG 2016-09-30 21:07:30,831: 	 Executing : 
+ command : openssl x509 -noout -in ~/.globus/usercert.pem -dates
+ output : notBefore=Sep 29 20:57:41 2016 GMT
+notAfter=Nov  3 20:57:41 2017 GMT
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:30,837: 	 Delegating a myproxy for 720:00 hours
+DEBUG 2016-09-30 21:07:30,837: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery_cmsweb.cern.ch for credential name
+DEBUG 2016-09-30 21:07:34,847: 	 Executing : 
+ command : export GT_PROXY_MODE=rfc ; myproxy-init -d -n -s myproxy.cern.ch -x -R '/DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch' -x -Z '/DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch' -l '9cc28f874b3232068312953bffc8c33522cba3d9' -t 168:00 -c 720:00
+ output : Your identity: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery
+Creating proxy ................................................................................................................................................................................ Done
+Proxy Verify OK
+Your proxy is valid until: Sun Oct 30 20:07:34 2016
+A proxy valid for 720 hours (30.0 days) for user 9cc28f874b3232068312953bffc8c33522cba3d9 now exists on myproxy.cern.ch.
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:34,848: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery_cmsweb.cern.ch for credential name
+DEBUG 2016-09-30 21:07:35,252: 	 Executing : 
+ command : myproxy-info -l 9cc28f874b3232068312953bffc8c33522cba3d9 -s myproxy.cern.ch
+ output : username: 9cc28f874b3232068312953bffc8c33522cba3d9
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  timeleft: 719:59:59  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-09-30 21:07:35,253: 	 My-proxy delegated.
+DEBUG 2016-09-30 21:07:35,253: 	 Command use: submit
+DEBUG 2016-09-30 21:07:35,253: 	 Options use: ['-c', 'crab_auto_submit_dy_jetsToLL_JSON.py']
+DEBUG 2016-09-30 21:07:35,656: 	 CRABClient version: 3.3.1608
+DEBUG 2016-09-30 21:07:35,656: 	 Instance is prod
+DEBUG 2016-09-30 21:07:35,656: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-09-30 21:07:35,656: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-09-30 21:07:35,656: 	 Started submission
+DEBUG 2016-09-30 21:07:35,656: 	 Working on /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL
+DEBUG 2016-09-30 21:07:36,161: 	 Loading required information from the environment
+DEBUG 2016-09-30 21:07:36,161: 	 Found CMSSW_8_0_2 for slc6_amd64_gcc493 with base /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2
+DEBUG 2016-09-30 21:07:36,177: 	 UNIQUE NAME: tarUUID 544da4c2-2cfd-4174-a9cc-02c721f932be 
+DEBUG 2016-09-30 21:07:36,178: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab_projects'
+config.General.requestName = 'dy_jetsToLL'
+config.section_('JobType')
+config.JobType.psetName = 'dimu_dy_jetsToLL_for_crab.py'
+config.JobType.pluginName = 'Analysis'
+config.section_('Data')
+config.Data.inputDataset = '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v1/MINIAODSIM'
+config.Data.outputDatasetTag = 'dy_jetsToLL'
+config.Data.publication = False
+config.Data.unitsPerJob = 10
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/acarnes/'
+config.section_('Site')
+config.Site.storageSite = 'T2_US_Florida'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2016-09-30 21:07:36,178: 	 self.config.JobType.psetName: dimu_dy_jetsToLL_for_crab.py
+INFO 2016-09-30 21:07:36,178: 	 Importing CMSSW configuration dimu_dy_jetsToLL_for_crab.py
+INFO 2016-09-30 21:07:42,681: 	 Finished importing CMSSW configuration dimu_dy_jetsToLL_for_crab.py
+DEBUG 2016-09-30 21:07:42,682: 	 Writing CMSSW configuration to /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL/inputs/PSet.py
+DEBUG 2016-09-30 21:07:42,788: 	 The following EDM output files will be collected: []
+DEBUG 2016-09-30 21:07:42,788: 	 The following TFile output files will be collected: ['stage_1_dy_jetsToLL.root']
+DEBUG 2016-09-30 21:07:42,788: 	 The following user output files will be collected: []
+DEBUG 2016-09-30 21:07:42,788: 	 Loading required information from the environment
+DEBUG 2016-09-30 21:07:42,788: 	 Found CMSSW_8_0_2 for slc6_amd64_gcc493 with base /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2
+DEBUG 2016-09-30 21:07:42,788: 	 Making tarball in /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL/inputs/544da4c2-2cfd-4174-a9cc-02c721f932bedefault.tgz
+DEBUG 2016-09-30 21:07:42,848: 	 Checking directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/lib
+DEBUG 2016-09-30 21:07:42,848: 	 Adding directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/lib to tarball
+DEBUG 2016-09-30 21:07:42,952: 	 Checking directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/biglib
+DEBUG 2016-09-30 21:07:42,952: 	 Adding directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/biglib to tarball
+DEBUG 2016-09-30 21:07:42,954: 	 Checking directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/module
+DEBUG 2016-09-30 21:07:43,099: 	 Adding data directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/interface to tarball
+DEBUG 2016-09-30 21:07:43,153: 	 Uploading archive /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL/inputs/544da4c2-2cfd-4174-a9cc-02c721f932bedefault.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-09-30 21:07:43,593: 	 Loading required information from the environment
+DEBUG 2016-09-30 21:07:43,593: 	 Found CMSSW_8_0_2 for slc6_amd64_gcc493 with base /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2
+DEBUG 2016-09-30 21:07:43,594: 	 Making tarball in /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL/inputs/debugFiles.tgz
+DEBUG 2016-09-30 21:07:43,598: 	 Uploading archive /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL/inputs/debugFiles.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-09-30 21:07:43,953: 	 Result uploading input files: c6a4241bc2b30274a24c6311c864615741c29a8821ea6412cda3a0ebfbc731b4.tar.gz 
+INFO 2016-09-30 21:07:43,953: 	 Sending the request to the server
+DEBUG 2016-09-30 21:07:43,953: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T2_US_Florida', 'algoargs': 10, 'cachefilename': 'c6a4241bc2b30274a24c6311c864615741c29a8821ea6412cda3a0ebfbc731b4.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_8_0_2', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v1/MINIAODSIM', 'lfn': '/store/user/acarnes/', 'dryrun': 0, 'workflow': 'crab_dy_jetsToLL', 'adduserfiles': [], 'nonprodsw': 0, 'tfileoutfiles': ['stage_1_dy_jetsToLL.root'], 'oneEventMode': 0, 'debugfilename': '3e379a73c305c004f7ebcc5d3fac731fdc546ec46684a7d212160b8ee5e1a30a.tar.gz', 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc493', 'totalunits': 0, 'splitalgo': 'FileBased', 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'dy_jetsToLL'} 
+DEBUG 2016-09-30 21:07:43,954: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T2_US_Florida&algoargs=10&cachefilename=c6a4241bc2b30274a24c6311c864615741c29a8821ea6412cda3a0ebfbc731b4.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_8_0_2&primarydataset=&inputdata=%2FDYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8%2FRunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Facarnes%2F&dryrun=0&workflow=crab_dy_jetsToLL&nonprodsw=0&oneEventMode=0&debugfilename=3e379a73c305c004f7ebcc5d3fac731fdc546ec46684a7d212160b8ee5e1a30a.tar.gz&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc493&totalunits=0&splitalgo=FileBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=dy_jetsToLL&tfileoutfiles=stage_1_dy_jetsToLL.root
+INFO 2016-09-30 21:07:44,619: 	 The server answered with an error.
+INFO 2016-09-30 21:07:44,619: 	 Server answered with: Invalid input parameter
+INFO 2016-09-30 21:07:44,619: 	 Reason is: The parameter Data.outLFNDirBase in the CRAB configuration file must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off...
+INFO 2016-09-30 21:07:44,619: 	 Error Id: 296cf6ca628ad8b2a405eb515bbc1135
+DEBUG 2016-09-30 21:07:44,619: 	 ERROR: Bad Request (400):  '<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>400 Bad Request</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>400 Bad Request</h2>
+        <p>Invalid input parameter</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+      <span>
+        Powered by <a href="http://www.cherrypy.org">CherryPy unknown</a>
+      </span>
+    </div>
+    </body>
+</html>
+'
+DEBUG 2016-09-30 21:07:44,619: 	 Command failed with URI: https://cmsweb.cern.ch/crabserver/prod/workflow
+DEBUG 2016-09-30 21:07:44,620: 	      Input data: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T2_US_Florida&algoargs=10&cachefilename=c6a4241bc2b30274a24c6311c864615741c29a8821ea6412cda3a0ebfbc731b4.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_8_0_2&primarydataset=&inputdata=%2FDYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8%2FRunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Facarnes%2F&dryrun=0&workflow=crab_dy_jetsToLL&nonprodsw=0&oneEventMode=0&debugfilename=3e379a73c305c004f7ebcc5d3fac731fdc546ec46684a7d212160b8ee5e1a30a.tar.gz&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc493&totalunits=0&splitalgo=FileBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=dy_jetsToLL&tfileoutfiles=stage_1_dy_jetsToLL.root
+DEBUG 2016-09-30 21:07:44,620: 	      Request headers: {'Content-Length': '734', 'X-Error-Http': '400', 'X-Rest-Time': '312180.042 us', 'Server': 'CherryPy/unknown', 'Connection': 'close', 'X-Error-Detail': 'Invalid input parameter', 'CMS-Server-Time': 'D=333047 t=1475262464281119', 'X-Rest-Status': '302', 'Date': 'Fri, 30 Sep 2016 19:07:44 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': "The parameter Data.outLFNDirBase in the CRAB configuration file must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off...", 'X-Error-Id': '296cf6ca628ad8b2a405eb515bbc1135'}
+ERROR 2016-09-30 21:07:44,620: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 148, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 133, in __call__
+    dictresult, status, reason = server.put(self.uri, data = self.configreq_encoded)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/RESTInteractions.py", line 91, in put
+    return self.makeRequest(uri = uri, data = data, verb = 'PUT')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/RESTInteractions.py", line 128, in makeRequest
+    capath=caCertPath)#, verbose=True)# for debug
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/WMCore/Services/pycurl_manager.py", line 209, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch/crabserver/prod/workflow, code=400, reason=Bad Request, headers={'Content-Length': '734', 'X-Error-Http': '400', 'X-Rest-Time': '312180.042 us', 'Server': 'CherryPy/unknown', 'Connection': 'close', 'X-Error-Detail': 'Invalid input parameter', 'CMS-Server-Time': 'D=333047 t=1475262464281119', 'X-Rest-Status': '302', 'Date': 'Fri, 30 Sep 2016 19:07:44 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': "The parameter Data.outLFNDirBase in the CRAB configuration file must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off...", 'X-Error-Id': '296cf6ca628ad8b2a405eb515bbc1135'}
+INFO 2016-09-30 21:07:44,645: 	 Log file is /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL/crab.log
