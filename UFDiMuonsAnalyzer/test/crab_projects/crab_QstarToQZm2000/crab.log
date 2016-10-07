@@ -1,0 +1,143 @@
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+
+
+Running over MC sample
+Sample Name:    QstarToQZm2000
+Sample DAS DIR: /QstarToQZ_M-2000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v2/MINIAODSIM
+
+Loading Global Tag: 80X_mcRun2_asymptotic_v14
+DEBUG 2016-10-07 04:11:11,069: 	 Executing command: 'submit'
+DEBUG 2016-10-07 04:11:11,069: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-07 04:11:11,073: 	 Checking credentials
+DEBUG 2016-10-07 04:11:11,074: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-07 04:11:11,074: 	 Getting proxy life time left
+DEBUG 2016-10-07 04:11:11,779: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 601215
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 04:11:12,184: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 601214
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 04:11:12,184: 	 Proxy valid for 167:00:15 hours
+INFO 2016-10-07 04:11:12,184: 	 Will use CRAB configuration file crab_auto_submit_QstarToQZm2000_JSON.py
+DEBUG 2016-10-07 04:11:12,184: 	 Loading CRAB configuration file.
+DEBUG 2016-10-07 04:11:12,187: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-10-07 04:11:12,358: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 04:11:12,358: 	 Checking credentials
+DEBUG 2016-10-07 04:11:12,358: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-07 04:11:12,358: 	 Getting proxy life time left
+DEBUG 2016-10-07 04:11:12,764: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 601214
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 04:11:13,168: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 601213
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 04:11:13,168: 	 Proxy valid for 167:00:14 hours
+DEBUG 2016-10-07 04:11:13,572: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u79777 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 04:11:14,365: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+DEBUG 2016-10-07 04:11:14,472: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 04:11:14,472: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-10-07 04:11:14,472: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery_cmsweb.cern.ch for credential name
+DEBUG 2016-10-07 04:11:14,575: 	 Executing : 
+ command : myproxy-info -l 9cc28f874b3232068312953bffc8c33522cba3d9 -s myproxy.cern.ch
+ output : username: 9cc28f874b3232068312953bffc8c33522cba3d9
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bregnery/CN=768002/CN=Brendan Regnery
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  timeleft: 568:56:20  (23.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 04:11:14,576: 	 Myproxy is valid: 2048180
+DEBUG 2016-10-07 04:11:14,576: 	 Command use: submit
+DEBUG 2016-10-07 04:11:14,576: 	 Options use: ['-c', 'crab_auto_submit_QstarToQZm2000_JSON.py']
+DEBUG 2016-10-07 04:11:15,253: 	 CRABClient version: 3.3.1608
+DEBUG 2016-10-07 04:11:15,253: 	 Instance is prod
+DEBUG 2016-10-07 04:11:15,253: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-10-07 04:11:15,253: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-10-07 04:11:15,253: 	 Started submission
+DEBUG 2016-10-07 04:11:15,253: 	 Working on /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm2000
+DEBUG 2016-10-07 04:11:15,628: 	 Loading required information from the environment
+DEBUG 2016-10-07 04:11:15,628: 	 Found CMSSW_8_0_2 for slc6_amd64_gcc493 with base /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2
+DEBUG 2016-10-07 04:11:15,638: 	 UNIQUE NAME: tarUUID 7c216249-420f-4771-8600-79d92396a3b5 
+DEBUG 2016-10-07 04:11:15,638: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab_projects'
+config.General.requestName = 'QstarToQZm2000'
+config.section_('JobType')
+config.JobType.psetName = 'dimu_QstarToQZm2000_for_crab.py'
+config.JobType.pluginName = 'Analysis'
+config.section_('Data')
+config.Data.inputDataset = '/QstarToQZ_M-2000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v2/MINIAODSIM'
+config.Data.outputDatasetTag = 'QstarToQZm2000'
+config.Data.publication = False
+config.Data.unitsPerJob = 10
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/bregnery/'
+config.section_('Site')
+config.Site.storageSite = 'T2_US_Florida'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2016-10-07 04:11:15,638: 	 self.config.JobType.psetName: dimu_QstarToQZm2000_for_crab.py
+INFO 2016-10-07 04:11:15,638: 	 Importing CMSSW configuration dimu_QstarToQZm2000_for_crab.py
+INFO 2016-10-07 04:11:16,532: 	 Finished importing CMSSW configuration dimu_QstarToQZm2000_for_crab.py
+DEBUG 2016-10-07 04:11:16,532: 	 Writing CMSSW configuration to /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm2000/inputs/PSet.py
+DEBUG 2016-10-07 04:11:16,630: 	 The following EDM output files will be collected: []
+DEBUG 2016-10-07 04:11:16,630: 	 The following TFile output files will be collected: ['stage_1_QstarToQZm2000.root']
+DEBUG 2016-10-07 04:11:16,630: 	 The following user output files will be collected: []
+DEBUG 2016-10-07 04:11:16,630: 	 Loading required information from the environment
+DEBUG 2016-10-07 04:11:16,630: 	 Found CMSSW_8_0_2 for slc6_amd64_gcc493 with base /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2
+DEBUG 2016-10-07 04:11:16,630: 	 Making tarball in /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm2000/inputs/7c216249-420f-4771-8600-79d92396a3b5default.tgz
+DEBUG 2016-10-07 04:11:16,636: 	 Checking directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/lib
+DEBUG 2016-10-07 04:11:16,636: 	 Adding directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/lib to tarball
+DEBUG 2016-10-07 04:11:16,738: 	 Checking directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/biglib
+DEBUG 2016-10-07 04:11:16,738: 	 Adding directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/biglib to tarball
+DEBUG 2016-10-07 04:11:16,739: 	 Checking directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/module
+DEBUG 2016-10-07 04:11:16,742: 	 Adding data directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/interface to tarball
+DEBUG 2016-10-07 04:11:16,791: 	 Uploading archive /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm2000/inputs/7c216249-420f-4771-8600-79d92396a3b5default.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-10-07 04:11:17,430: 	 Loading required information from the environment
+DEBUG 2016-10-07 04:11:17,430: 	 Found CMSSW_8_0_2 for slc6_amd64_gcc493 with base /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2
+DEBUG 2016-10-07 04:11:17,430: 	 Making tarball in /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm2000/inputs/debugFiles.tgz
+DEBUG 2016-10-07 04:11:17,433: 	 Uploading archive /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm2000/inputs/debugFiles.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-10-07 04:11:17,828: 	 Result uploading input files: d7b3b6923f7b6ea34592aa7c98f5f2b70ca71bff2553c4c90eb748be15278a5c.tar.gz 
+INFO 2016-10-07 04:11:17,828: 	 Sending the request to the server
+DEBUG 2016-10-07 04:11:17,828: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T2_US_Florida', 'algoargs': 10, 'cachefilename': 'd7b3b6923f7b6ea34592aa7c98f5f2b70ca71bff2553c4c90eb748be15278a5c.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_8_0_2', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/QstarToQZ_M-2000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v2/MINIAODSIM', 'lfn': '/store/user/bregnery/', 'dryrun': 0, 'workflow': 'crab_QstarToQZm2000', 'adduserfiles': [], 'nonprodsw': 0, 'tfileoutfiles': ['stage_1_QstarToQZm2000.root'], 'oneEventMode': 0, 'debugfilename': '0d71af630f8b412c42cca28aadb64c4371645534605f476c561526f7ac23ecf3.tar.gz', 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc493', 'totalunits': 0, 'splitalgo': 'FileBased', 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'QstarToQZm2000'} 
+DEBUG 2016-10-07 04:11:17,828: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T2_US_Florida&algoargs=10&cachefilename=d7b3b6923f7b6ea34592aa7c98f5f2b70ca71bff2553c4c90eb748be15278a5c.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_8_0_2&primarydataset=&inputdata=%2FQstarToQZ_M-2000_TuneCUETP8M1_13TeV-pythia8%2FRunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v2%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Fbregnery%2F&dryrun=0&workflow=crab_QstarToQZm2000&nonprodsw=0&oneEventMode=0&debugfilename=0d71af630f8b412c42cca28aadb64c4371645534605f476c561526f7ac23ecf3.tar.gz&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc493&totalunits=0&splitalgo=FileBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=QstarToQZm2000&tfileoutfiles=stage_1_QstarToQZm2000.root
+DEBUG 2016-10-07 04:11:18,583: 	 Result: {'result': [{'RequestName': '161007_021118:bregnery_crab_QstarToQZm2000'}]}
+INFO 2016-10-07 04:11:18,584: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2016-10-07 04:11:18,585: 	 Task name: 161007_021118:bregnery_crab_QstarToQZm2000
+INFO 2016-10-07 04:11:18,585: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2016-10-07 04:11:18,585: 	 About to return
+INFO 2016-10-07 04:11:18,587: 	 Log file is /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm2000/crab.log

@@ -44,8 +44,8 @@ if thisIsData:
 else:
     print 'Running over MC sample'
 
-print "Sample Name:    " +  "QstarToQZm5000"
-print "Sample DAS DIR: " +  "/QstarToQZ_M-5000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM"
+print "Sample Name:    " +  "QstarToQZm1000"
+print "Sample DAS DIR: " +  "/QstarToQZ_M-1000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM"
 if thisIsData:
     print "Sample JSON:    " +  s.jsonfiles[1]
 print ""
@@ -137,7 +137,7 @@ if thisIsData:
 # Save output with TFileService
 # /////////////////////////////////////////////////////////////
 
-process.TFileService = cms.Service("TFileService", fileName = cms.string("stage_1_"+"QstarToQZm5000"+".root") )
+process.TFileService = cms.Service("TFileService", fileName = cms.string("stage_1_"+"QstarToQZm1000"+".root") )
 
 # /////////////////////////////////////////////////////////////
 # Load UFDiMuonAnalyzer

@@ -44,8 +44,8 @@ if thisIsData:
 else:
     print 'Running over MC sample'
 
-print "Sample Name:    " +  "QstarToQZm5000"
-print "Sample DAS DIR: " +  "/QstarToQZ_M-5000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM"
+print "Sample Name:    " +  "dy_jetsToLL"
+print "Sample DAS DIR: " +  "/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v1/MINIAODSIM"
 if thisIsData:
     print "Sample JSON:    " +  s.jsonfiles[1]
 print ""
@@ -54,7 +54,7 @@ print ""
 # global tag, automatically retrieved from the imported sample
 # /////////////////////////////////////////////////////////////
 
-globalTag = "80X_mcRun2_asymptotic_v14"
+globalTag = "74X_mcRun2_asymptotic_v2"
 
 # The updated FrontierConditions_GlobalTag load needed for 2015 13TeV data does not like the ::All at the end of the tag
 #if not thisIsData:
@@ -137,7 +137,7 @@ if thisIsData:
 # Save output with TFileService
 # /////////////////////////////////////////////////////////////
 
-process.TFileService = cms.Service("TFileService", fileName = cms.string("stage_1_"+"QstarToQZm5000"+".root") )
+process.TFileService = cms.Service("TFileService", fileName = cms.string("stage_1_"+"dy_jetsToLL"+".root") )
 
 # /////////////////////////////////////////////////////////////
 # Load UFDiMuonAnalyzer

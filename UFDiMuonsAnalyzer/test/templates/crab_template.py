@@ -16,7 +16,7 @@ config.Data.splitting = 'FileBased'
 #config.Data.splitting = 'LumiBased' # Must use this with JSON file
 #config.Data.lumiMask = 's.jsonfiles[1]'
 config.Data.unitsPerJob = 10
-config.Data.outLFNDirBase = '/store/user/acarnes/'
+config.Data.outLFNDirBase = '/store/user/bregnery/'
 config.Data.publication = False
 config.Data.outputDatasetTag = 's.name'
 

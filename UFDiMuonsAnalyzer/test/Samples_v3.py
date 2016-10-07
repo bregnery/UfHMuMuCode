@@ -30,7 +30,7 @@ doubleMuon = []
 # 25 ns
 doubleMuon_RunC25nsOct_MINIAOD = sample(name="doubleMuon_RunC25nsOct_MINIAOD", 
                                  dir="/DoubleMuon/Run2015C_25ns-05Oct2015-v1/MINIAOD", 
-                                 files = [],
+                                 files = [], #open('sample_file_lists/data/doubleMuon_RunC25nsOct_MINIAOD.files').read().splitlines(),
                                  numevents=900626,
                                  globaltag = '74X_dataRun2_v4',
                                  jsonfiles = jsonlist25[:],
@@ -38,7 +38,7 @@ doubleMuon_RunC25nsOct_MINIAOD = sample(name="doubleMuon_RunC25nsOct_MINIAOD",
 
 doubleMuon_RunDOct_v1_MINIAOD = sample(name="doubleMuon_RunDOct_v1_MINIAOD", 
                                  dir="/DoubleMuon/Run2015D-05Oct2015-v1/MINIAOD", 
-                                 files = [],
+                                 files = [], #open('sample_file_lists/data/doubleMuon_RunDOct_v1_MINIAOD.files').read().splitlines(),
                                  numevents=19923262,
                                  globaltag = '74X_dataRun2_reMiniAOD_v0',
                                  jsonfiles = jsonlist25[:],
@@ -46,7 +46,7 @@ doubleMuon_RunDOct_v1_MINIAOD = sample(name="doubleMuon_RunDOct_v1_MINIAOD",
 
 doubleMuon_RunDPrompt_v4_MINIAOD = sample(name="doubleMuon_RunDPrompt_v4_MINIAOD", 
                                  dir="/DoubleMuon/Run2015D-PromptReco-v4/MINIAOD", 
-                                 files = [],
+                                 files =[], #open('sample_file_lists/data/doubleMuon_RunDPrompt_v4_MINIAOD.files').read().splitlines(),
                                  numevents=31538841,
                                  globaltag = '74X_dataRun2_Prompt_v4',
                                  jsonfiles = jsonlist25[:],
@@ -62,7 +62,7 @@ singleMuon = []
 # 25 ns
 singleMuon_RunC25nsOct_MINIAOD = sample(name="singleMuon_RunC25nsOct_MINIAOD", 
                                  dir="/SingleMuon/Run2015C_25ns-05Oct2015-v1/MINIAOD", 
-                                 files = [],
+                                 files = [],#open('sample_file_lists/data/singleMuon_RunC25nsOct_MINIAOD.files').read().splitlines(),
                                  numevents=1341179,
                                  globaltag = '74X_dataRun2_v4',
                                  jsonfiles = jsonlist25[:],
@@ -70,7 +70,7 @@ singleMuon_RunC25nsOct_MINIAOD = sample(name="singleMuon_RunC25nsOct_MINIAOD",
 
 singleMuon_RunDOct_v1_MINIAOD = sample(name="singleMuon_RunDOct_v1_MINIAOD", 
                                  dir="/SingleMuon/Run2015D-05Oct2015-v1/MINIAOD", 
-                                 files = [],
+                                 files = [],#open('sample_file_lists/data/singleMuon_RunDOct_v1_MINIAOD.files').read().splitlines(),
                                  numevents=31298328,
                                  globaltag = '74X_dataRun2_reMiniAOD_v0',
                                  jsonfiles = jsonlist25[:],
@@ -78,7 +78,7 @@ singleMuon_RunDOct_v1_MINIAOD = sample(name="singleMuon_RunDOct_v1_MINIAOD",
 
 singleMuon_RunDPrompt_v4_MINIAOD = sample(name="singleMuon_RunDPrompt_v4_MINIAOD", 
                                  dir="/SingleMuon/Run2015D-PromptReco-v4/MINIAOD", 
-                                 files = [],
+                                 files = [],#open('sample_file_lists/data/singleMuon_RunDPrompt_v4_MINIAOD.files').read().splitlines(),
                                  numevents=61066301,
                                  globaltag = '74X_dataRun2_Prompt_v4',
                                  jsonfiles = jsonlist25[:],
@@ -93,30 +93,42 @@ singleMuon.append(singleMuon_RunDPrompt_v4_MINIAOD)
 # =======================================================================================================
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////
-#------ Excited Quark M-7000 GeV-------------------------------------------------------------------------
+#------ Excited Quark M-2000 GeV-------------------------------------------------------------------------
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 signal = []
 
-QstarToQZm7000 = sample( name="QstarToQZm7000",
-		            dir="/QstarToQZ_M-7000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM",
-			    files = [],
-			    numevents=30000,
+QstarToQZm2000 = sample( name="QstarToQZm2000",
+		            dir="/QstarToQZ_M-2000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v2/MINIAODSIM",
+			    files = [],#open('sample_file_lists/signal/QstarToQZm7000.files').read().splitlines(),
+			    numevents=29722,
 			    globaltag = '80X_mcRun2_asymptotic_v14' )
 
-signal.append(QstarToQZm7000)
+signal.append(QstarToQZm2000)
 
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////
 #------- Excited Quark M-5000 GeV-------------------------------------------------------------------------
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 QstarToQZm5000 = sample( name="QstarToQZm5000",
-		            dir="",
-			    files = [],
+		            dir="/QstarToQZ_M-5000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM",
+			    files = [], #open('sample_file_lists/signal/QstarToQZm5000.files').read().splitlines(),
 			    numevents=29870,
 			    globaltag = '80X_mcRun2_asymptotic_v14' )
 
 signal.append(QstarToQZm5000)
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////
+#------- Excited Quark M-1000 GeV-------------------------------------------------------------------------
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+QstarToQZm1000 = sample( name="QstarToQZm1000",
+		            dir="/QstarToQZ_M-1000_TuneCUETP8M1_13TeV-pythia8/RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/MINIAODSIM",
+			    files = [], #open('sample_file_lists/signal/QstarToQZm5000.files').read().splitlines(),
+			    numevents=29863,
+			    globaltag = '80X_mcRun2_asymptotic_v14' )
+
+signal.append(QstarToQZm1000)
 
 ## ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ##---- Gluon Gluon Fusion --------------------------------------------------------------------------------
@@ -173,13 +185,13 @@ background = []
 
 dy_ZToMuMu_asympt25 = sample(name="dy_ZToMuMu_asympt25", 
                               dir="/ZToMuMu_NNPDF30_13TeV-powheg_M_50_120/RunIISpring15DR74-Asympt25ns_MCRUN2_74_V9-v1/MINIAODSIM",
-                              files = [],
+                              files = [], #open('sample_file_lists/bg/dy_ZToMuMu_asympt25.files').read().splitlines(),
                               numevents=2848076,
                               globaltag = 'MCRUN2_74_V9')
 
 dy_jetsToLL = sample(name="dy_jetsToLL", 
                      dir="/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v1/MINIAODSIM",
-                     files = [],
+                     files = [], #open('sample_file_lists/bg/dy_jetsToLL.files').read().splitlines(),
                      numevents=28747969,
                      globaltag = '74X_mcRun2_asymptotic_v2');
 
@@ -192,13 +204,13 @@ background.append(dy_jetsToLL)
 
 ttJets = sample(name="ttJets", 
                 dir="/TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/RunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v3/MINIAODSIM",
-                files = [],
+                files = [],#open('sample_file_lists/bg/ttJets.files').read().splitlines(),
                 numevents=42784971,
                 globaltag = '74X_mcRun2_asymptotic_v2')
 
 ttZToLLNuNu = sample(name="ttZToLLNuNu", 
                      dir="/TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8/RunIISpring15MiniAODv2-74X_mcRun2_asymptotic_v2-v2/MINIAODSIM",
-                     files = [],
+                     files = [],#open('sample_file_lists/bg/ttZToLLNuNu.files').read().splitlines(),
                      numevents=398000,
                      globaltag = '74X_mcRun2_asymptotic_v2')
 

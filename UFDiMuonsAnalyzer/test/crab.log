@@ -282,3 +282,77 @@ Traceback (most recent call last):
     raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
 ConfigException: Working area '/afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm7000' already exists 
 Please change the requestName in the config file
+DEBUG 2016-10-06 01:33:36,221: 	 Executing command: 'submit'
+DEBUG 2016-10-06 01:33:36,223: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-06 01:33:36,255: 	 Checking credentials
+DEBUG 2016-10-06 01:33:36,256: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-06 01:33:36,256: 	 Getting proxy life time left
+DEBUG 2016-10-06 01:33:36,868: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 604531
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-06 01:33:37,274: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 604530
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-06 01:33:37,274: 	 Proxy valid for 167:55:31 hours
+INFO 2016-10-06 01:33:37,274: 	 Will use CRAB configuration file crab_auto_submit_dy_jetsToLL_JSON.py
+DEBUG 2016-10-06 01:33:37,274: 	 Loading CRAB configuration file.
+DEBUG 2016-10-06 01:33:37,278: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2016-10-06 01:33:37,295: 	 Working area '/afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL' already exists 
+Please change the requestName in the config file
+ERROR 2016-10-06 01:33:37,295: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 302, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL' already exists 
+Please change the requestName in the config file
+DEBUG 2016-10-07 03:11:36,643: 	 Executing command: 'submit'
+DEBUG 2016-10-07 03:11:36,644: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-07 03:11:36,680: 	 Checking credentials
+DEBUG 2016-10-07 03:11:36,680: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-07 03:11:36,680: 	 Getting proxy life time left
+DEBUG 2016-10-07 03:11:37,184: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 604789
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 03:11:37,587: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 604789
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-07 03:11:37,587: 	 Proxy valid for 167:59:49 hours
+INFO 2016-10-07 03:11:37,588: 	 Will use CRAB configuration file crab_auto_submit_dy_jetsToLL_JSON.py
+DEBUG 2016-10-07 03:11:37,588: 	 Loading CRAB configuration file.
+DEBUG 2016-10-07 03:11:37,591: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2016-10-07 03:11:37,592: 	 Working area '/afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL' already exists 
+Please change the requestName in the config file
+ERROR 2016-10-07 03:11:37,592: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 302, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_2/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_dy_jetsToLL' already exists 
+Please change the requestName in the config file
