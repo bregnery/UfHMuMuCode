@@ -42,7 +42,6 @@ UFDiMuonsAnalyzer::UFDiMuonsAnalyzer(const edm::ParameterSet& iConfig):_numEvent
   _isVerbose	= iConfig.getUntrackedParameter<bool>("isVerbose", false);
   _isMonteCarlo	= iConfig.getParameter<bool>("isMonteCarlo");
   _checkTrigger = iConfig.getParameter<bool>("checkTrigger");
-<<<<<<< HEAD
 
   // Get selection criteria from config file
   _nMuons  = iConfig.getParameter<int>("nMuons");
@@ -58,23 +57,6 @@ UFDiMuonsAnalyzer::UFDiMuonsAnalyzer(const edm::ParameterSet& iConfig):_numEvent
   _processName = iConfig.getParameter<std::string>("processName");
   _triggerNames = iConfig.getParameter<std::vector <std::string> >("triggerNames");
 
-=======
-
-  // Get selection criteria from config file
-  _nMuons  = iConfig.getParameter<int>("nMuons");
-  _isGlobal = iConfig.getParameter<int>("isGlobal");
-  _isTracker = iConfig.getParameter<int>("isTracker");
-  _ptMin  = iConfig.getParameter<double>("ptMin");
-  _etaMax = iConfig.getParameter<double>("etaMax");
-
-  if (!_isGlobal && !_isTracker) 
-    std::cout << "\n\nWARNING: you are not requiring the muon to be not TRACKER nor GLOBAL\n" << "Be aware of the fact that StandAlone muon only are rejected anyway in the code\n";
-
-  // Get trigger information from config file
-  _processName = iConfig.getParameter<std::string>("processName");
-  _triggerNames = iConfig.getParameter<std::vector <std::string> >("triggerNames");
-
->>>>>>> 027553af21b617039fdbce2576f6f3c88a2b17f5
   _triggerResultsToken = consumes<edm::TriggerResults>(iConfig.getParameter<edm::InputTag>("triggerResults"));
   _triggerObjsToken = consumes<pat::TriggerObjectStandAloneCollection>(iConfig.getParameter<edm::InputTag>("triggerObjs"));
 }
@@ -85,19 +67,11 @@ UFDiMuonsAnalyzer::~UFDiMuonsAnalyzer() {}
 ///////////////////////////////////////////////////////////
 // Analyze ===============================================
 //////////////////////////////////////////////////////////
-<<<<<<< HEAD
 
 // Need to break this up into functions for easier readability
 // Muons, Jets, Vertices
 // Could make some helper classes
 
-=======
-
-// Need to break this up into functions for easier readability
-// Muons, Jets, Vertices
-// Could make some helper classes
-
->>>>>>> 027553af21b617039fdbce2576f6f3c88a2b17f5
 void UFDiMuonsAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
 // function called every event
