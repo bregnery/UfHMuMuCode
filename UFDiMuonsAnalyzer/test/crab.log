@@ -479,3 +479,292 @@ DEBUG 2016-10-07 19:13:13,183: 	 Executing :
  error: 
  retcode : 0
 ERROR 2016-10-07 19:13:13,218: 	 Keyboard Interrupted
+DEBUG 2016-10-30 15:26:41,591: 	 Executing command: 'submit'
+DEBUG 2016-10-30 15:26:41,593: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-30 15:26:41,640: 	 Checking credentials
+DEBUG 2016-10-30 15:26:41,641: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-30 15:26:41,641: 	 Getting proxy life time left
+DEBUG 2016-10-30 15:26:42,250: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 604736
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 15:26:42,758: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 604736
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 15:26:42,760: 	 Proxy valid for 167:58:56 hours
+INFO 2016-10-30 15:26:42,760: 	 Will use CRAB configuration file crab_auto_submit_singleMuon_Run2016B_MINIAOD_JSON1.py
+DEBUG 2016-10-30 15:26:42,760: 	 Loading CRAB configuration file.
+DEBUG 2016-10-30 15:26:42,767: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2016-10-30 15:26:42,768: 	 Working area '/afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016B_MINIAOD_JSON1' already exists 
+Please change the requestName in the config file
+ERROR 2016-10-30 15:26:42,768: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 302, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016B_MINIAOD_JSON1' already exists 
+Please change the requestName in the config file
+DEBUG 2016-10-30 16:11:45,480: 	 Executing command: 'status'
+DEBUG 2016-10-30 16:11:45,481: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-30 16:11:45,486: 	 Checking credentials
+DEBUG 2016-10-30 16:11:45,486: 	 Proxy file /tmp/x509up_u79777 not found
+DEBUG 2016-10-30 16:11:45,486: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-10-30 16:11:53,509: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2016-10-30 16:11:53,913: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86399
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:54,517: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:54,920: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u79777 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:54,920: 	 Proxy created.
+ERROR 2016-10-30 16:11:54,921: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm1000
+ERROR 2016-10-30 16:11:54,922: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 321, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 450, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm1000
+DEBUG 2016-10-30 16:11:55,270: 	 Executing command: 'status'
+DEBUG 2016-10-30 16:11:55,270: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-30 16:11:55,274: 	 Checking credentials
+DEBUG 2016-10-30 16:11:55,275: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-30 16:11:55,275: 	 Getting proxy life time left
+DEBUG 2016-10-30 16:11:55,680: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:56,083: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86396
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:56,083: 	 Proxy valid for 23:59:57 hours
+ERROR 2016-10-30 16:11:56,084: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm2000
+ERROR 2016-10-30 16:11:56,085: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 321, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 450, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm2000
+DEBUG 2016-10-30 16:11:56,423: 	 Executing command: 'status'
+DEBUG 2016-10-30 16:11:56,423: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-30 16:11:56,427: 	 Checking credentials
+DEBUG 2016-10-30 16:11:56,427: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-30 16:11:56,427: 	 Getting proxy life time left
+DEBUG 2016-10-30 16:11:56,832: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86396
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:57,236: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86395
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:57,236: 	 Proxy valid for 23:59:56 hours
+ERROR 2016-10-30 16:11:57,237: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm5000
+ERROR 2016-10-30 16:11:57,237: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 321, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 450, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_QstarToQZm5000
+DEBUG 2016-10-30 16:11:57,575: 	 Executing command: 'status'
+DEBUG 2016-10-30 16:11:57,575: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-30 16:11:57,579: 	 Checking credentials
+DEBUG 2016-10-30 16:11:57,580: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-30 16:11:57,580: 	 Getting proxy life time left
+DEBUG 2016-10-30 16:11:57,983: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86395
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:58,386: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86394
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:58,387: 	 Proxy valid for 23:59:55 hours
+ERROR 2016-10-30 16:11:58,388: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016B_MINIAOD_JSON1
+ERROR 2016-10-30 16:11:58,388: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 321, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 450, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016B_MINIAOD_JSON1
+DEBUG 2016-10-30 16:11:58,730: 	 Executing command: 'status'
+DEBUG 2016-10-30 16:11:58,730: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-30 16:11:58,734: 	 Checking credentials
+DEBUG 2016-10-30 16:11:58,734: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-30 16:11:58,734: 	 Getting proxy life time left
+DEBUG 2016-10-30 16:11:59,137: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86393
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:59,540: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86393
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:11:59,540: 	 Proxy valid for 23:59:53 hours
+ERROR 2016-10-30 16:11:59,542: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016C_MINIAOD_JSON1
+ERROR 2016-10-30 16:11:59,542: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 321, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 450, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016C_MINIAOD_JSON1
+DEBUG 2016-10-30 16:11:59,872: 	 Executing command: 'status'
+DEBUG 2016-10-30 16:11:59,872: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-30 16:11:59,876: 	 Checking credentials
+DEBUG 2016-10-30 16:11:59,876: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-30 16:11:59,876: 	 Getting proxy life time left
+DEBUG 2016-10-30 16:12:00,380: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86392
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:12:00,785: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86392
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:12:00,785: 	 Proxy valid for 23:59:52 hours
+ERROR 2016-10-30 16:12:00,786: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016D_MINIAOD_JSON1
+ERROR 2016-10-30 16:12:00,786: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 321, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 450, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016D_MINIAOD_JSON1
+DEBUG 2016-10-30 16:12:01,129: 	 Executing command: 'status'
+DEBUG 2016-10-30 16:12:01,129: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-30 16:12:01,133: 	 Checking credentials
+DEBUG 2016-10-30 16:12:01,133: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-30 16:12:01,133: 	 Getting proxy life time left
+DEBUG 2016-10-30 16:12:01,536: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86391
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:12:01,940: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86391
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:12:01,941: 	 Proxy valid for 23:59:51 hours
+ERROR 2016-10-30 16:12:01,942: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016E_MINIAOD_JSON1
+ERROR 2016-10-30 16:12:01,942: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 321, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 450, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016E_MINIAOD_JSON1
+DEBUG 2016-10-30 16:12:02,298: 	 Executing command: 'status'
+DEBUG 2016-10-30 16:12:02,299: 	 Found CRAB cache file /afs/cern.ch/user/b/bregnery/.crab3
+DEBUG 2016-10-30 16:12:02,306: 	 Checking credentials
+DEBUG 2016-10-30 16:12:02,307: 	 Found proxy file /tmp/x509up_u79777
+DEBUG 2016-10-30 16:12:02,307: 	 Getting proxy life time left
+DEBUG 2016-10-30 16:12:02,812: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -timeleft
+ output : 86390
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:12:03,216: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u79777 -actimeleft
+ output : 86389
+
+ error: 
+ retcode : 0
+DEBUG 2016-10-30 16:12:03,216: 	 Proxy valid for 23:59:50 hours
+ERROR 2016-10-30 16:12:03,217: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016F_MINIAOD_JSON1
+ERROR 2016-10-30 16:12:03,217: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 321, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 450, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/b/bregnery/public/BoostedZStudies/CMSSW_8_0_12/src/UfHMuMuCode/UFDiMuonsAnalyzer/test/crab_projects/crab_singleMuon_Run2016F_MINIAOD_JSON1
