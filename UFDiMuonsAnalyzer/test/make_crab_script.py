@@ -6,10 +6,10 @@ samples = []
 #samples.extend(Samples_v3.MC);
 #samples.extend(Samples_v3.background);
 #samples.extend(Samples_v3.signal);
-#samples.extend(Samples_v3.singleMuon);
-samples.extend(Samples_v3.singleAndMC);
+samples.extend(Samples_v3.singleMuon);
+#samples.extend(Samples_v3.singleAndMC);
 
-json_number = 1
+json_number = 0
 
 for s in samples:
     # open a file for writing
@@ -35,8 +35,8 @@ for s in samples:
             line = line.replace('s.dir', '\"' + s.dir + '\"')
         if 's.globaltag' in line: 
             line = line.replace('s.globaltag', '\"' + s.globaltag + '\"')
-        #if 's.jsonfiles[1]' in line and s.isData: 
-        #    line = line.replace('s.jsonfiles[1]', '\"' + s.jsonfiles[json_number] + '\"')
+        if 's.jsonfiles[1]' in line and s.isData: 
+            line = line.replace('s.jsonfiles[1]', '\"' + s.jsonfiles[json_number] + '\"')
     
         outfile.write(line)
     
@@ -61,7 +61,7 @@ for s in samples:
             line = line.replace('FileBased', 'LumiBased')
         if s.isData and 'config.Data.lumiMask' in line: 
             line = line.replace('#', '')
-        #    line = line.replace('s.jsonfiles[1]', s.jsonfiles[json_number])
+            line = line.replace('s.jsonfiles[1]', s.jsonfiles[json_number])
         if 's.name' in line: 
             name = s.name
             if s.isData: name+="_JSON"+str(json_number)

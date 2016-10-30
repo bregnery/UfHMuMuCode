@@ -18,8 +18,10 @@ class sample:
 
 # 25 ns
 # The jsonfiles details the valid lumi sections
-jsonlist2016 = ['sample_file_lists/data/json/Cert_271036-276811_13TeV_PromptReco_Collisions16_JSON.txt',  #ICHEP, 12.9/fb
-                'sample_file_lists/data/json/Cert_271036-277148_13TeV_PromptReco_Collisions16_JSON.txt']  #15.9/fb
+jsonlist2016 = ['sample_file_lists/data/json/Cert_271036-280385_13TeV_PromptReco_Collisions16_JSON_NoL1T_v2.txt', #BCDEFGH
+		'sample_file_lists/data/json/Cert_271036-276811_13TeV_PromptReco_Collisions16_JSON.txt',  #ICHEP, 12.9/fb
+                'sample_file_lists/data/json/Cert_271036-277148_13TeV_PromptReco_Collisions16_JSON.txt'  #15.9/fb
+		]
 # The jsonfiles detail which luminosity sections during data taking were good
 jsonlist25 = ['sample_file_lists/data/json/Cert_246908-260627_13TeV_PromptReco_Collisions15_25ns_JSON_MuonPhys_v2.txt',
             'sample_file_lists/data/json/Cert_246908-260627_13TeV_PromptReco_Collisions15_25ns_JSON_v2.txt',
@@ -145,14 +147,16 @@ singleMuon_RunDPrompt_v4_MINIAOD = sample(name="singleMuon_RunDPrompt_v4_MINIAOD
                                  jsonfiles = jsonlist25[:],
                                  isData = True)
 
-singleMuon.append(singleMuon_RunC25nsOct_MINIAOD)
-singleMuon.append(singleMuon_RunDOct_v1_MINIAOD)
-singleMuon.append(singleMuon_RunDPrompt_v4_MINIAOD)
+#singleMuon.append(singleMuon_RunC25nsOct_MINIAOD)
+#singleMuon.append(singleMuon_RunDOct_v1_MINIAOD)
+#singleMuon.append(singleMuon_RunDPrompt_v4_MINIAOD)
 singleMuon.append(singleMuon_Run2016B_MINIAOD)
 singleMuon.append(singleMuon_Run2016C_MINIAOD)
 singleMuon.append(singleMuon_Run2016D_MINIAOD)
 singleMuon.append(singleMuon_Run2016E_MINIAOD)
 singleMuon.append(singleMuon_Run2016F_MINIAOD)
+singleMuon.append(singleMuon_Run2016G_MINIAOD)
+singleMuon.append(singleMuon_Run2016H_MINIAOD)
 
 ## =======================================================================================================
 ## ------------------------------- SIGNAL ----------------------------------------------------------------
